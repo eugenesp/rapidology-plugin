@@ -153,6 +153,7 @@ class rapidology_mailchimp extends RAD_Rapidology{
 	$merge_vars = array(
 	  'FNAME' => $name,
 	  'LNAME' => $last_name,
+	  'URL' => wp_get_referer()
 	);
 
 	$retval = $mailchimp->call( 'lists/subscribe', array(
